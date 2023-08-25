@@ -118,8 +118,18 @@ Since `bedtomeme()` is a wrapper function, please follow the steps below to down
 1. Download the [MEME Suite](https://meme-suite.org/meme/doc/download.html).
 2. Install the MEME Suite by following the [instructions](https://meme-suite.org/meme/doc/install.html?man_type=web). Installation using MacPorts is recommended.
 3. Download the [yeast genome](https://meme-suite.org/meme/doc/download.html).
+   1. Click "Show/Hide Sequence Databases"
 
-4.  
+      ![My Image](images/image1.png)
+      
+   2. Click "fasta_yeast.tgz"
+      ![My Image](images/image2.png)
+      
+   3. Unzip "fasta_yeast.tgz"
+
+   4. navigate to the *`fasta_yeast/UCSCOther/`* folder, copy *`sacCer3.fna`*, *`sacCer3.fna.bfile`*, and *`sacCer3.fna.fai`*, then paste them into the location where the peak finder scripts are located.
+
+5.  
 
 ## Questions?
 If you have any questions, please contact xxx
