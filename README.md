@@ -97,10 +97,10 @@ Use `goanalysis()` to generate a GO term plot using a BED file.
 ### Required arguments
 
 ### `bedfile`
-Specify the location and the name of the BED file.
+Specify both the location and the name of the BED file.
 
 ### `outdir`
-Specify the name of the folder where the GO term plot will be saved.
+Specify the name of the folder in which the GO term plot will be saved.
 
 ### Optional arguments
 
@@ -108,7 +108,7 @@ Specify the name of the folder where the GO term plot will be saved.
 Specify the font size of each GO term.
 
 ### `termlength`
-Specify the number of terms appear on the GO term plot.
+Specify the number of terms that will appear on the GO term plot.
 
 ### Optional arguments
 
