@@ -8,22 +8,22 @@ There are three functions in the *`peak_finder/`*. `callpeaks()` is used to iden
 ```
 git clone https://github.com/ChengzheDuan/ChEC-seq_Peak_Finder.git
 ```
-2. In the *`peak_finder/`* folder, find and open the *`run program.R`* file.
+2. Navigate to the *`peak_finder/`* folder and open the *`run program.R`* file.
 3. Set the working directory to where all the files are located
 4. Load the `callpeaks()` function with:
 ```
 source("peak finder.R")
 ```
-5. Beofre running the peak finder with your own BAM files, run:
+5. Before running the peak finder with your own BAM files, run:
 ```
 callpeaks(folder_treatment = "files_treatment_rap1",
           folder_control = "files_control_rap1",
           outdir = "test_folder_nup2_nohis_foldchange1.2_0.0001"
 )
 ```
-to test whether the peak finder works correctly.
+This will verify if the peak finder runs correctly.
 
-7. Once the function finished running without any errors, load the `goanalysis()` function with:
+6. Once the function completes execution without any errors, load the `goanalysis()` function with:
 ```
 source("GO analysis.R")
 ```
@@ -33,9 +33,9 @@ goanalysis(bedfile = "./test_folder/peaks.bed",
            outdir = "test_folder"
            )
 ```
-to test whether a GO term plot is produced.
+to check if a GO term plot is generated.
 
-8. Lastly, load the `bedtomeme()` wrapper function with:
+7. Lastly, load the `bedtomeme()` wrapper function with:
 ```
 source("run meme.R")
 ```
@@ -48,8 +48,51 @@ bedtomeme(bed2fasta_filepath = "/opt/local/libexec/meme-5.5.1/bed2fasta",
           meme_filepath = "/opt/local/bin/meme",
           meme_output_folder = "test_folder/meme_output")
 ```
-to test whether MEME results are produced. **Since `bedtomeme()` is a wrapper function, you have to have MEME Suite installed locally before using it. See the bedtomeme section below for more details**
-## callpeaks
-Use `callpeaks` function to identify peaks from BAM files. 
+to check if MEME results are generated. **Since `bedtomeme()` is a wrapper function, you must have the MEME Suite installed locally prior to using it. See the bedtomeme section below for more details**
+## `callpeaks()`
+Use `callpeaks()` to identify peaks from BAM files. 
+### Required arguments
+
+### `folder_treatment`:
+Specify the folder where the treatment (TF-MNase) BAM files are located. The folder should be placed in the same location as all the scripts.
+
+### `folder_control`:
+Specify the folder where the control (sMNase) BAM files are located. The folder should be placed in the same location as all the scripts.
+
+### Optional arguments
+
+### `numcores`
+Specify the number of CPU cores to use in the `mclapply()` function. See [`mclapply()`](https://www.rdocumentation.org/packages/parallel/versions/3.4.0/topics/mclapply) documentation for more details. **If Windows OS is detected, only 1 CPU core will be used.**
+
+### `outdir`
+Specify the name of the output folder. The folder will be created and, and the peak finder results will be saved within it.
+
+### `w`
+Specify the sliding window size. See [`Slidingwindow()`](https://rdrr.io/github/coleoguy/evobir/man/SlidingWindow.html) documentation for more details.
+
+### `stepsize`
+Specify the step between windows. See [`Slidingwindow()`](https://rdrr.io/github/coleoguy/evobir/man/SlidingWindow.html) documentation for more details.
+
+### `foldchange`
+Specify the log foldchange value, which is the same as the lfcThreshold argument in DESeq2. See [DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) for more details.
+
+### `p_value`
+Specify the adjusted p-value, which is used to filter DESeq2 results. See [DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) for more details.
+
+### `lower_distance`
+Specify the distance below which doublet peaks closer than the set number will be filtered out.
+
+### `upper_distance`
+Specify the distance above which doublet peaks closer than the set number will be filtered out.
+
+### `localmax_output`
+If this argument is set as TRUE, a BED file with all identified local maxima will be generated
+
+### `peaks_after_solmnase_filter`
+If this argument is set as TRUE, a BED file with all the peaks survived sMNase filtering will be generated
+
+## `goanalysis()`
+
+
 ## Questions?
 If you have any questions, please contact xxx
