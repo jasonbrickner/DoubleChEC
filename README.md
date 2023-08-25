@@ -92,7 +92,25 @@ If this argument is set as TRUE, a BED file with all identified local maxima wil
 If this argument is set as TRUE, a BED file with all the peaks survived sMNase filtering will be generated
 
 ## `goanalysis()`
+Use `goanalysis()` to generate a GO term plot using a BED file.
 
+### Required arguments
+
+### `bedfile`
+Specify the location and the name of the BED file.
+
+### `outdir`
+Specify the name of the folder where the GO term plot will be saved.
+
+### Optional arguments
+
+### `fontsize`
+Specify the font size of each GO term.
+
+### `termlength`
+Specify the number of terms appear on the GO term plot.
+
+### Optional arguments
 
 ## Questions?
 If you have any questions, please contact xxx
