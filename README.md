@@ -129,7 +129,14 @@ Since `bedtomeme()` is a wrapper function, please follow the steps below to down
 
    4. navigate to the *`fasta_yeast/UCSCOther/`* folder, copy *`sacCer3.fna`*, *`sacCer3.fna.bfile`*, and *`sacCer3.fna.fai`*, then paste them into the location where the peak finder scripts are located.
 
-5.  
+### Required arguments 
+
+### `bed2fasta_filepath`
+bed2fasta program filepath. **It's usually hidden. Mac users can use shift + command + . to find it.**
+
+e.g.
+
+
 
 ## Questions?
 If you have any questions, please contact xxx
