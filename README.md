@@ -171,4 +171,4 @@ bedtomeme(bed2fasta_filepath = "/opt/local/libexec/meme-5.5.1/bed2fasta",
 ```
 
 ## Questions?
-If you have any questions, please contact xxx
+If you have any questions, please contact Dr. Jason Brickner (j-brickner@northwestern.edu)
