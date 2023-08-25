@@ -49,6 +49,7 @@ bedtomeme(bed2fasta_filepath = "/opt/local/libexec/meme-5.5.1/bed2fasta",
           meme_output_folder = "test_folder/meme_output")
 ```
 to check if MEME results are generated. **Since `bedtomeme()` is a wrapper function, you must have the MEME Suite installed locally prior to using it. See the bedtomeme section below for more details**
+
 ## `callpeaks()`
 Use `callpeaks()` to identify peaks from BAM files. 
 ### Required arguments
@@ -110,7 +111,15 @@ Specify the font size of each GO term.
 ### `termlength`
 Specify the number of terms that will appear on the GO term plot.
 
-### Optional arguments
+## `bedtomeme()`
+Use `bedtomeme()` to perform MEME analysis in R.
+
+Since `bedtomeme()` is a wrapper function, please follow the steps below to download and install the MEME Suite first prior to using it:
+1. Download the [MEME Suite](https://meme-suite.org/meme/doc/download.html).
+2. Install the MEME Suite by following the [instructions](https://meme-suite.org/meme/doc/install.html?man_type=web). Installation using MacPorts is recommended.
+3. Download the [yeast genome](https://meme-suite.org/meme/doc/download.html).
+
+4.  
 
 ## Questions?
 If you have any questions, please contact xxx
