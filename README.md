@@ -132,11 +132,42 @@ Since `bedtomeme()` is a wrapper function, please follow the steps below to down
 ### Required arguments 
 
 ### `bed2fasta_filepath`
-bed2fasta program filepath. **It's usually hidden. Mac users can use shift + command + . to find it.**
+Specify the path to the `bed2fasta` program. **This file is usually hidden. Mac users can press `shift + command + .` to find it.**
 
 e.g.
 
+![My Image](images/image3.png)
 
+### `fasta_output_filename`
+Specify the file path and the name of the FASTA file converted from the BED file.
+
+### `genome_file`
+Specify the yeast genome file (It's usually sacCer3.fna).
+
+### `bed_filepath`
+Specify the file path and the name of the BED file.
+
+### `meme_filepath`
+Specify the path to the `meme` program. **This file is usually hidden. Mac users can press `shift + command + .` to find it.**
+
+### `meme_output_folder`
+Specify the name and the file path in which the MEME results are saved.
+
+### Optional argument 
+
+### `meme_additional`
+Specify any [additional meme program arguments](https://meme-suite.org/meme/doc/meme.html) you'd like to use. 
+
+For example:
+```
+bedtomeme(bed2fasta_filepath = "/opt/local/libexec/meme-5.5.1/bed2fasta",
+          fasta_output_filename = "test_folder/fasta4meme.fna",
+          genome_file = "sacCer3.fna",
+          bed_filepath = "test_folder/peaks.bed",
+          meme_filepath = "/opt/local/bin/meme",
+          meme_additional = "-markov_order 2 -nmotifs 4",
+          meme_output_folder = "test_folder/meme_output")
+```
 
 ## Questions?
 If you have any questions, please contact xxx
