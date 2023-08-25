@@ -51,7 +51,8 @@ bedtomeme(bed2fasta_filepath = "/opt/local/libexec/meme-5.5.1/bed2fasta",
 to check if MEME results are generated. **Since `bedtomeme()` is a wrapper function, you must have the MEME Suite installed locally prior to using it. See the bedtomeme section below for more details**
 
 ## `callpeaks()`
-Use `callpeaks()` to identify peaks from BAM files. 
+Use `callpeaks()` to identify peaks from BAM files. Three output files are generated from the function. First, all the parameter values used to run the algorithm and the number of peaks after each filtering step are documented in a text file. Second, all the peaks identified by the algorithm are stored in a bed file. An Excel file is also created, which includes positions of local maxima, peaks retained after DESeq2, and doublet peaks. If the position of a peak falls within 700bp upstream of a gene, the peak is also annotated with that gene information.
+
 ### Required arguments
 
 ### `folder_treatment`:
@@ -66,7 +67,7 @@ Specify the folder where the control (sMNase) BAM files are located. The folder 
 Specify the number of CPU cores to use in the `mclapply()` function. See [`mclapply()`](https://www.rdocumentation.org/packages/parallel/versions/3.4.0/topics/mclapply) documentation for more details. **If Windows OS is detected, only 1 CPU core will be used.**
 
 ### `outdir`
-Specify the name of the output folder. The folder will be created and, and the peak finder results will be saved within it.
+Specify the name of the output folder. The folder will be created, and the peak finder results will be saved within it.
 
 ### `w`
 Specify the sliding window size. See [`Slidingwindow()`](https://rdrr.io/github/coleoguy/evobir/man/SlidingWindow.html) documentation for more details.
@@ -134,7 +135,7 @@ Since `bedtomeme()` is a wrapper function, please follow the steps below to down
 ### `bed2fasta_filepath`
 Specify the path to the `bed2fasta` program. **This file is usually hidden. Mac users can press `shift + command + .` to find it.**
 
-e.g.
+For example:
 
 ![My Image](images/image3.png)
 
@@ -151,12 +152,12 @@ Specify the file path and the name of the BED file.
 Specify the path to the `meme` program. **This file is usually hidden. Mac users can press `shift + command + .` to find it.**
 
 ### `meme_output_folder`
-Specify the name and the file path in which the MEME results are saved.
+Specify the name and the file path where the MEME results are saved.
 
 ### Optional argument 
 
 ### `meme_additional`
-Specify any [additional meme program arguments](https://meme-suite.org/meme/doc/meme.html) you'd like to use. 
+Specify any [additional arguments](https://meme-suite.org/meme/doc/meme.html) you'd like to use with the MEME program. 
 
 For example:
 ```
