@@ -18,7 +18,7 @@ source("peak finder.R")
 ```
 callpeaks(folder_treatment = "files_treatment_rap1",
           folder_control = "files_control_rap1",
-          outdir = "test_folder_nup2_nohis_foldchange1.2_0.0001"
+          outdir = "test_folder"
 )
 ```
 This will verify if the peak finder runs correctly.
