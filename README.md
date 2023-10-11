@@ -4,7 +4,7 @@ ChIP-seq (chromatin immunoprecipitation followed by sequencing) is commonly used
 
 There are three functions in the *`peak_finder/`*. `callpeaks()` is used to identify peaks from BAM files. `goanalysis()` is used to make GO (Gene Ontology) term plots from peaks. `bedtomeme()` is a wrapper function to perform [MEME analysis](https://meme-suite.org/meme/tools/meme) in R **after [MEME Suite](https://meme-suite.org/meme/doc/download.html) is installed locally**.  
 ## Usage
-1. Clone the ChEC-seq_Peak_Finder Repo
+1. Clone the DoubleChEC Repo
 ```
 git clone https://github.com/ChengzheDuan/ChEC-seq_Peak_Finder.git
 ```
