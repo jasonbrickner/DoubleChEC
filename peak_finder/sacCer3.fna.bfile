@@ -1,0 +1,24 @@
+# 1-order Markov frequencies from file meme-data3/fasta_databases/UCSCOther/sacCer3.fna
+# seqs: 17    min: 85779    max: 1531933    avg: 715123.8    sum: 12157105    alph: DNA
+# order 0
+A 3.093e-01
+C 1.907e-01
+G 1.907e-01
+T 3.093e-01
+# order 1
+AA 1.084e-01
+AC 5.250e-02
+AG 5.816e-02
+AT 9.024e-02
+CA 6.452e-02
+CC 3.883e-02
+CG 2.923e-02
+CT 5.816e-02
+GA 6.211e-02
+GC 3.729e-02
+GG 3.883e-02
+GT 5.250e-02
+TA 7.428e-02
+TC 6.211e-02
+TG 6.452e-02
+TT 1.084e-01
