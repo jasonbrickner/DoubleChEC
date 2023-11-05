@@ -118,7 +118,7 @@ Use `bedtomeme()` to perform MEME analysis in R.
 Since `bedtomeme()` is a wrapper function, please follow the steps below to download and install the MEME Suite first prior to using it:
 1. Download the [MEME Suite](https://meme-suite.org/meme/doc/download.html).
 2. Install the MEME Suite by following the [instructions](https://meme-suite.org/meme/doc/install.html?man_type=web). Installation using MacPorts is recommended.
-3. Download the [yeast genome](https://meme-suite.org/meme/doc/download.html).
+3. UCSC SacCer3 is included with this package.  If you want to use a genome other than UCSC SacCer3, download the [yeast genome](https://meme-suite.org/meme/doc/download.html) as follows:
    1. Click "Show/Hide Sequence Databases"
 
       ![My Image](images/image1.png)
