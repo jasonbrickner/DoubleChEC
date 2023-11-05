@@ -6,7 +6,7 @@ There are three functions in the *`peak_finder/`*. `callpeaks()` is used to iden
 ## Usage
 1. Clone the DoubleChEC Repo
 ```
-git clone https://github.com/ChengzheDuan/ChEC-seq_Peak_Finder.git
+git clone https://github.com/jasonbrickner/DoubleChEC.git
 ```
 Check that the bam files are the same size as they are on GitHub (60-140 Mb).  If not, download these files separately and put into the files_control_rap1 and files_treatment_rap1 folders.
 
