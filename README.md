@@ -8,6 +8,8 @@ There are three functions in the *`peak_finder/`*. `callpeaks()` is used to iden
 ```
 git clone https://github.com/ChengzheDuan/ChEC-seq_Peak_Finder.git
 ```
+Check that the bam files are the same size as they are on GitHub (60-140 Mb).  If not, download these files separately and put into the files_control_rap1 and files_treatment_rap1 folders.
+
 2. Navigate to the *`peak_finder/`* folder and open the *`run program.R`* file.
 3. Set the working directory to where all the files are located
 4. Load the `callpeaks()` function with:
