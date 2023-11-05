@@ -2,7 +2,7 @@ rm(list = ls())
 
 # Set working directory
 # Please make sure all the scripts and treatment/control folders are in the working directory
-setwd("set wokring directory")
+setwd("set working directory")
 
 # Peak calling
 source("peak finder.R")
